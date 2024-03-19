@@ -26,7 +26,7 @@ int Balls(std::string guess, std::string answer) {
 std::string util();
 void Game() {
     std::string answer = util();
-    std::cout << "Answer is " << answer << std::endl;
+    //std::cout << "Answer is " << answer << std::endl;
     int count = 5;
     while (1) {
         std::cout << count << " chances left." << std::endl;
