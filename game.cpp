@@ -12,10 +12,10 @@ int Strikes(std::string guess, std::string answer) {
 
 int Balls(std::string guess, std::string answer) {
     int balls = 0;
-    if(guess[0] == answer[1] || guess[0] == answer[2]) {
+    if(guess[0] == answer[1] || guess[0] == answer[2] ) {
         balls++;
     }
-    if(guess[1] == answer[0] || guess[1] == answer[2]) {
+    if(guess[1] == answer[0] || guess[1] == answer[2] ) {
         balls++;
     }
     if(guess[2] == answer[0] || guess[2] == answer[1]) {
@@ -23,10 +23,10 @@ int Balls(std::string guess, std::string answer) {
     }
     return balls;
 }
+std::string util();
 void Game() {
-    std::cout << "Enter a answer: ";
-    std::string answer;
-    std::cin >> answer;
+    std::string answer = util();
+    std::cout << "Answer is " << answer << std::endl;
     while (1) {
         std::string guess;
         std::cout << "Enter a guess: ";
