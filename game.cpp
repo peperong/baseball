@@ -41,11 +41,14 @@ void Game() {
             std::cout << "You Win!" << std::endl;
             break;
         }
-        else std::cout << "Strikes: " << strikes << ", Balls: " << balls << std::endl;
+        else if(count > 1) { 
+            std::cout << "Strikes: " << strikes << ", Balls: " << balls << std::endl;
+        }
         count--;
-        if (count == 0) {
-            std::cout << "You Lose!" << std::endl;
-            break;
+            if(count == 0) {
+                std::cout << "You lose!" << std::endl;
+                break;
+            }
         }
     }
-}
+
