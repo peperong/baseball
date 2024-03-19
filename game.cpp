@@ -27,7 +27,9 @@ std::string util();
 void Game() {
     std::string answer = util();
     std::cout << "Answer is " << answer << std::endl;
+    int count = 5;
     while (1) {
+        std::cout << count << " chances left." << std::endl;
         std::string guess;
         std::cout << "Enter a guess: ";
         std::cin >> guess;
@@ -40,5 +42,10 @@ void Game() {
             break;
         }
         else std::cout << "Strikes: " << strikes << ", Balls: " << balls << std::endl;
+        count--;
+        if (count == 0) {
+            std::cout << "You Lose!" << std::endl;
+            break;
+        }
     }
 }
